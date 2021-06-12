@@ -39,6 +39,8 @@ class Test {
         System.out.println(c instanceof Animal);
         System.out.println(r instanceof Mammal);
         System.out.println(d instanceof Dog);
+        System.out.println(r instanceof Animal);
+        System.out.println(r instanceof Reptile);
         d.print();
     }
 }
