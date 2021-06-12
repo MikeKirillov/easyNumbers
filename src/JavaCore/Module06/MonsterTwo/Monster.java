@@ -1,4 +1,4 @@
-package JavaCore.Module06;
+package JavaCore.Module06.MonsterTwo;
 
 public class Monster {
     private String name;
@@ -20,8 +20,10 @@ public class Monster {
 }
 
 class Zombie extends Monster {
+    public static String scream = "Raaaauuughhhh";
+
     public Zombie(String name) {
-        super (name + " the Zombie", 5);
+        super(name + " the Zombie", 5);
     }
 
     @Override
@@ -32,13 +34,23 @@ class Zombie extends Monster {
 
     @Override
     public void growl() {
-        System.out.print("Raaaauuughhhh");
+        System.out.print(scream);
         super.growl();
     }
 
+    public void growl(boolean loud) {
+        if (!loud) {
+            growl();
+        } else {
+            System.out.print(scream.toUpperCase());
+            super.growl();
+        }
+    }
+
     public static void main(String[] args) {
-        Zombie zombie = new Zombie("Bob");
-        zombie.attack();
+        Zombie zombie = new Zombie("Alice");
         zombie.growl();
+        zombie.growl(true);
+        zombie.growl(false);
     }
 }

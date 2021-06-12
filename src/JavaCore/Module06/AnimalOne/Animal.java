@@ -1,4 +1,4 @@
-package JavaCore.Module06;
+package JavaCore.Module06.AnimalOne;
 
 public class Animal {// superclass, parent class
     private boolean vegetarian;
