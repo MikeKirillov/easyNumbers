@@ -1,4 +1,4 @@
-package JavaCore.Module06.HW06;
+package JavaCore.Module06.HW06.Selftask;
 
 public class Motorcycle extends MotorVehicle {
     public Motorcycle(String brand, String model, int hp, int topSpeed) {

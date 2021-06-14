@@ -1,4 +1,4 @@
-package JavaCore.Module06.HW06;
+package JavaCore.Module06.HW06.Selftask;
 
 public class Car extends MotorVehicle {
     public boolean tuned;
