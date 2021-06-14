@@ -7,11 +7,15 @@ public class Motorcycle extends MotorVehicle {
 
     @Override
     public String toString() {
-        String str = "Brand: " + this.getBrand();
-        str += "\nModel: " + this.getModel();
-        str += "\nHorse power: " + this.getHp();
-        str += "\nTop speed: " + this.getTopSpeed();
-        return str;
+//        String str = "Brand: " + this.getBrand();
+//        str += "\nModel: " + this.getModel();
+//        str += "\nHorse power: " + this.getHp();
+//        str += "\nTop speed: " + this.getTopSpeed();
+//        return str;
+        return "Brand: " + this.getBrand()
+                + "\nModel: " + this.getModel()
+                + "\nHorse power: " + this.getHp()
+                + "\nTop speed: " + this.getTopSpeed();
     }
 
     @Override

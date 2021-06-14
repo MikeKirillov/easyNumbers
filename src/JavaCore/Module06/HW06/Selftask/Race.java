@@ -39,7 +39,7 @@ public class Race {
             time = track_distance / speedConvert(vehicle.topSpeed);
             vehicle.acceleration = (vehicle.topSpeed - START_SPEED) / time;
             vehicle.stopEngine();
-            System.out.println("Riders finished " + track_distance + " meter(-s) track with following results:\ntime - " + time + ";\nacceleration - " + vehicle.acceleration);
+            System.out.println("Driver finished " + track_distance + " meter(-s) track with following results:\ntime - " + time + ";\nacceleration - " + vehicle.acceleration);
         }
         System.out.println("--------------");
         System.out.println("RESULTS:");
