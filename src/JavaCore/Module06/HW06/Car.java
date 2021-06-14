@@ -10,4 +10,27 @@ public class Car extends MotorVehicle {
             System.out.println("It was tuned! Such a cheater!");
         }
     }
+
+    @Override
+    public String toString() {
+        String str = "Brand: " + this.getBrand();
+        str += "\nModel: " + this.getModel();
+        str += "\nHorse power: " + this.getHp();
+        str += "\nTop speed: " + this.getTopSpeed();
+        str += "\nTuned: " + this.getTuned();
+        return str;
+    }
+
+    public boolean getTuned() {
+        return tuned;
+    }
+
+    @Override
+    public void startEngine() {
+        super.startEngine();
+    }
+
+    public void stopEngine() {
+        super.stopEngine();
+    }
 }

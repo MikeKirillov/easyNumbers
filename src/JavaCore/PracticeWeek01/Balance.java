@@ -1,6 +1,7 @@
 package JavaCore.PracticeWeek01;
 
 public class Balance {// task01
+
     public static void main(String[] args) {
         Libra libra = new Libra();
 
@@ -31,6 +32,6 @@ class Libra {
             return "R";
         } else
             System.out.println("L");
-            return "L";
+        return "L";
     }
 }
