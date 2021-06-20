@@ -1,9 +1,7 @@
 package JavaCore.Module07.Zoo;
 
-public class Animal {
-    public void print() {
-        System.out.println(this);
-    }
+abstract public class Animal {
+    abstract public void print();
 
     @Override
     public String toString() {
