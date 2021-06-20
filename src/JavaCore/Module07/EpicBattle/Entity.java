@@ -10,7 +10,7 @@ abstract public class Entity {
         this.name = name;
     }
 
-    protected boolean damage(int dhp) {
+    protected boolean takeDamage(int dhp) {
         hp -= dhp;
         if (hp < 0) {
             destroyed = true;

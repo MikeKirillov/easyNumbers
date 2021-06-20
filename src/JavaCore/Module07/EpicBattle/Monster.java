@@ -1,6 +1,6 @@
 package JavaCore.Module07.EpicBattle;
 
-public abstract class Monster extends Entity{
+public abstract class Monster extends Entity implements Fighter{
 //    private String name;// moved to Entity
     private int force;
 //    private int hp = 15;// moved to Entity

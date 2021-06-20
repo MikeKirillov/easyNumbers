@@ -9,7 +9,7 @@ class Battle{
     private Entity[] entities;
     private int n = 0;
 
-    Battle(){
+    Battle(){// constructor
         entities = new Entity[MAX];
     }
 
@@ -39,9 +39,7 @@ class Battle{
                 destroyed++;
             }
         }
-
         System.out.println("The Great Battle is finished");
-
     }
 
     public void start(){

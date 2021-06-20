@@ -9,6 +9,5 @@ public class Main {
         battle.add(new Tower("Big Ben"));
 
         battle.start();
-
     }
 }
