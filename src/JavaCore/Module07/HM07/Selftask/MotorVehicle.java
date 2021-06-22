@@ -1,4 +1,4 @@
-package JavaCore.Module07.Selftask;
+package JavaCore.Module07.HM07.Selftask;
 
 public abstract class MotorVehicle extends Vehicle {
     public int exhaustSoundLvl;

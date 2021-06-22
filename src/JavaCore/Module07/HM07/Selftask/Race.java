@@ -1,6 +1,4 @@
-package JavaCore.Module07.Selftask;
-
-import java.util.Scanner;
+package JavaCore.Module07.HM07.Selftask;
 
 public class Race {
     final static private int START_SPEED = 0;// meters per sec
@@ -34,15 +32,16 @@ public class Race {
         for (Vehicle vehicle : vehicles) {
             System.out.println("--------------");
             System.out.println(vehicle);
-            vehicle.startEngine();
+            ((Engine)vehicle).startEngine();// приведение к типу интерфейса Engine
             System.out.println("...all eyes on the driver...");
             time = track_distance / speedConvert(vehicle.getTopSpeed());
             vehicle.setAcceleration((vehicle.getTopSpeed() - START_SPEED) / time);
-            vehicle.stopEngine();
+            ((Engine)vehicle).stopEngine();
             System.out.println("Driver finished " + track_distance + " meter(-s) track with following results:\ntime - " + time + ";\nacceleration - " + vehicle.getAcceleration());
         }
         System.out.println("--------------");
         System.out.println("RESULTS:");
+
         int i = 0;
 
         if (vehicles[i].getAcceleration() < vehicles[i + 1].getAcceleration()) {

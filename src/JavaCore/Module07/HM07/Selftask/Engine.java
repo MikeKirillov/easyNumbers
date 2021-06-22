@@ -1,4 +1,4 @@
-package JavaCore.Module07.Selftask;
+package JavaCore.Module07.HM07.Selftask;
 
 public interface Engine {
     void startEngine();

@@ -1,10 +1,10 @@
-package JavaCore.Module07.Selftask;
+package JavaCore.Module07.HM07.Selftask;
 
-public abstract class Vehicle implements Engine {
+public abstract class Vehicle {
     private String brand, model;
     private int hp, topSpeed;
     private double acceleration;
-    private boolean engineStatus;
+    public boolean engineStatus;
 
     public Vehicle(String brand, String model, int hp, int topSpeed) {
         this.brand = brand;
@@ -25,7 +25,7 @@ public abstract class Vehicle implements Engine {
         return engineStatus;
     }
 
-    public String getFullName(){
+    public String getFullName() {
         return getBrand() + " " + getModel();
     }
 
@@ -43,24 +43,6 @@ public abstract class Vehicle implements Engine {
 
     public int getTopSpeed() {
         return topSpeed;
-    }
-
-    public void startEngine() {
-        if (engineStatus) {
-            System.out.println(getFullName() + " engine is already STARTED");
-        } else {
-            setEngineStatus(true);
-            System.out.println(getFullName() + " engine STARTED");
-        }
-    }
-
-    public void stopEngine() {
-        if (!engineStatus) {
-            System.out.println(getFullName() + " engine is already STOPPED");
-        } else {
-            setEngineStatus(false);
-            System.out.println(getFullName() + " engine STOPPED");
-        }
     }
 
     public void setEngineStatus(boolean engineStatus) {
