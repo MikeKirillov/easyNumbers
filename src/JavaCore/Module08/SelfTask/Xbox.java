@@ -35,7 +35,7 @@ public class Xbox {// outer class
         return name;
     }
 
-    public boolean getWorkingState(){
+    public boolean getWorkingState() {
         return isWorking;
     }
 
@@ -44,13 +44,17 @@ public class Xbox {// outer class
         class Features {// local inner class
 
             String bluetooth() {
-                if (!isHasBluetooth()) return "bluetooth - no";
-                else return "bluetooth - yes";
+                if (!isHasBluetooth())
+                    return "bluetooth - no";
+                else
+                    return "bluetooth - yes";
             }
 
             String wifi() {
-                if (!isHasWiFi()) return "wifi - no";
-                else return "wifi - yes";
+                if (!isHasWiFi())
+                    return "wifi - no";
+                else
+                    return "wifi - yes";
             }
         }
 
@@ -62,15 +66,20 @@ public class Xbox {// outer class
                 "other features: " + features.bluetooth() + ", " + features.wifi();
     }
 
-    public void turnPower(String mode){
-        class PowerMode{// method local class
-            PowerMode(String mode){
-                if (!Xbox.this.isWorking && mode.equalsIgnoreCase("on")) Xbox.this.isWorking = true;
-                else if (Xbox.this.isWorking && mode.equalsIgnoreCase("off")) Xbox.this.isWorking = false;
+    public void turnPower(String mode) {
+        class PowerMode {// method local class
+
+            PowerMode(String mode) {
+                if (!Xbox.this.isWorking && mode.equalsIgnoreCase("on"))
+                    Xbox.this.isWorking = true;
+                else if (Xbox.this.isWorking && mode.equalsIgnoreCase("off"))
+                    Xbox.this.isWorking = false;
             }
         }
         PowerMode powerMode = new PowerMode(mode);
-    };
+    }
+
+    ;
 
     class Controller {// inner class
         private boolean isWireless, compatible;
@@ -81,9 +90,11 @@ public class Xbox {// outer class
         }
 
         @Override
-        public String toString(){
-            if (compatible) return "current controller is compatible to your Xbox! \nhave fun playing games \ndon't forget to visit Xbox Games Store";
-            else return "yikes! \nseems like your controller ain't compatible to Xbox :( \ntry another one";
+        public String toString() {
+            if (compatible)
+                return "current controller is compatible to your Xbox! \nhave fun playing games \ndon't forget to visit Xbox Games Store";
+            else
+                return "yikes! \nseems like your controller ain't compatible to Xbox :( \ntry another one";
         }
     }
 }
