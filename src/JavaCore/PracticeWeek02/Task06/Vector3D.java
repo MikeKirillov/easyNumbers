@@ -7,7 +7,7 @@ public class Vector3D extends Vector {
 
     @Override
     public double getLength() {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2) + Math.pow(z2 - z1, 2));
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2));
     }
 
     @Override
@@ -15,7 +15,14 @@ public class Vector3D extends Vector {
         return (x2 - x1) + " " + (y2 - y1) + " " + (z2 - z1);
     }
 
-    public double scalarProduct(Vector3D vector) {
-        return 0;
+    public double getScalarProduct(Vector3D vector3D) {
+        String cords1 = getVectorCords();
+        String cords2 = vector3D.getVectorCords();
+
+        int a = Integer.parseInt(cords1.split(" ") [0]) * Integer.parseInt(cords2.split(" ")[0]);
+        int b = Integer.parseInt(cords1.split(" ") [1]) * Integer.parseInt(cords2.split(" ")[1]);
+        int c = Integer.parseInt(cords1.split(" ") [2]) * Integer.parseInt(cords2.split(" ")[2]);
+
+        return a + b + c;
     }
 }

@@ -7,7 +7,7 @@ public class Vector2D extends Vector {
 
     @Override
     public double getLength() {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
 
     @Override
@@ -15,11 +15,20 @@ public class Vector2D extends Vector {
         return (x2 - x1) + " " + (y2 - y1);
     }
 
-    public double scalarProduct(Vector2D vector) {
-        return 0;
+    public double getScalarProduct(Vector2D vector2D) {
+        String cords1 = getVectorCords();
+        String cords2 = vector2D.getVectorCords();
+
+        int a = Integer.parseInt(cords1.split(" ")[0]) * Integer.parseInt(cords2.split(" ")[0]);
+        int b = Integer.parseInt(cords1.split(" ")[1]) * Integer.parseInt(cords2.split(" ")[1]);
+
+        return a + b;
     }
 
-    public double getAngle(Vector2D vector) {
-        return 0;
+    public double getAngle(Vector2D vector2D) {
+        if (getLength() != 0 && vector2D.getLength() != 0)
+            return getScalarProduct(vector2D) / (this.getLength() * vector2D.getLength());
+        else
+            return -2.0;
     }
 }
