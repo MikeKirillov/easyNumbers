@@ -54,7 +54,7 @@ public class Directory {
             if (files[i].isFile() && !files[i].isHidden()) {
                 names.append(files[i].getName()).append("\n");
             }
-        } 
+        }
         System.out.println("Files names:\n" + names);
     }
 }
