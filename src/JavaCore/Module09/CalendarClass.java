@@ -1,9 +1,7 @@
 package JavaCore.Module09;
 
-import java.sql.SQLOutput;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.logging.SimpleFormatter;
 
 public class CalendarClass {
     public static void main(String[] args) {

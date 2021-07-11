@@ -19,8 +19,9 @@ public class DateClass {
 
         System.out.println(date.after(date1));// return true or false if 1st is bigger than 2nd
         System.out.println(date.before(date1));// return true or false if 1st is smaller than 2nd
-        System.out.println(date.compareTo(date1));// return -1 if 1st is smaller,
+        System.out.println(date.compareTo(date1));// return:
+        // -1 if 1st is smaller,
         // 0 if equals,
-        // 1 if bigger 1st is bigger
+        // 1 if 1st is bigger
     }
 }
