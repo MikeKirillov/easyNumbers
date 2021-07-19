@@ -50,11 +50,19 @@ public class Directory {
 //    }
 
         StringBuilder names = new StringBuilder();// files names in a row
-        for (int i = 0; i < files.length; i++) {
-            if (files[i].isFile() && !files[i].isHidden()) {
-                names.append(files[i].getName()).append("\n");
+
+        if (files != null) {
+//            for (int i = 0; i < files.length; i++) {
+//                if (files[i].isFile() && !files[i].isHidden()) {
+//                    names.append(files[i].getName()).append("\n");
+//                }
+//            }
+            for (File file: files) {
+                if (file.isFile() && !file.isHidden()) {
+                    names.append(file.getName()).append("\n");
+                }
             }
+            System.out.println("Files names:\n" + names);
         }
-        System.out.println("Files names:\n" + names);
     }
 }
