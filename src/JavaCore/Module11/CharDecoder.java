@@ -5,7 +5,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.charset.UnsupportedCharsetException;
 
-public class AnotherCharDecoder {
+public class CharDecoder {
     public static void main(String[] args) {
         if (copyFileUsingStream("src/JavaCore/Module11/utf16.txt",
                 "UTF-16",
@@ -15,7 +15,7 @@ public class AnotherCharDecoder {
         }
     }
 
-    private static boolean copyFileUsingStream(String source, String sourceEnc, String dest, String descEnc) {
+    private static boolean copyFileUsingStream(String source, String sourceEnc, String dest, String destEnc) {
         Charset sEnc = null;
         try {
             sEnc = Charset.forName(sourceEnc);
@@ -25,7 +25,7 @@ public class AnotherCharDecoder {
         }
         Charset dEnc = null;
         try {
-            dEnc = Charset.forName(descEnc);
+            dEnc = Charset.forName(destEnc);
         } catch (UnsupportedCharsetException e) {
             System.out.println("Code problems of OUTput file");
             return false;
