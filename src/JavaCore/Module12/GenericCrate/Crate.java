@@ -19,23 +19,13 @@ public class Crate<T> {// generic-class
         this.contents = contents;
     }
 
-    public static void main(String[] args) {
-        Crate<Elephant> crateForElephant = new Crate<Elephant>(); // создали клетку для слона
-        Crate<Monkey> crateForMonkey = new Crate<Monkey>(); // и клетку для обезьяны
-        Crate<Wolf> crateForWolf = new Crate<Wolf>(); // и клетку для волка
-        // как видите, нам не потребовалось определять каждый раз новый класс для клеток
-        Elephant elephant = crateForElephant.getContents();
-        Monkey monkey = crateForMonkey.getContents();
-        Wolf wolf = crateForWolf.getContents();
-
-//        crateForElephant.setContents(new Wolf()); // compile error
-
+    public static <T> Crate<T> ship(T stuff) {// generic-method
+        System.out.println("Preparing " + stuff);
+        return new Crate<T>();
     }
-}
 
-class Elephant{
-}
-class Monkey{
-}
-class Wolf{
+    public static <T extends Number> void ship(T number) {// upper bound
+        double value = number.doubleValue();
+        System.out.println("Preparing " + value);
+    }
 }
