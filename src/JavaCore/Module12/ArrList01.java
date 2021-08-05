@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Queue;
 
 public class ArrList01 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {// to show ArrayList constructors
+
         // 1st way to declare ArrayList
         List<String> list = new ArrayList<>();// creating new List with array inside for
         // default 10 values (initial capacity)
