@@ -8,7 +8,7 @@ public class Main {
     private static String TOYOTA = "TOYOTA";
 
     public static void main(String[] args) {// the task is to create the catalog of unique model cars
-        // creating 10 car objects of different cars
+        // creating 30 car objects of different cars
         Car car1 = new Car(TOYOTA, "Camry", false);
         Car car2 = new Car(TOYOTA, "Corolla", false);
         Car car3 = new Car(TOYOTA, "Celica", true);
