@@ -7,9 +7,21 @@ testing some for and for each loops
 */
 public class LoopClass {
     public static void main(String[] args) {
-//        int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int[] intArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
+        int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        int[] intArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+/*
+        int[] intArray = new int[10];
+        intArray[0] = 1;
+        intArray[1] = 2;
+        intArray[2] = 3;
+        intArray[3] = 4;
+        intArray[4] = 5;
+        intArray[5] = 6;
+        intArray[6] = 7;
+        intArray[7] = 8;
+        intArray[8] = 9;
+        intArray[9] = 10;
+*/
         System.out.println(Arrays.toString(intArray));// print array as string
 
         printArray(intArray);
