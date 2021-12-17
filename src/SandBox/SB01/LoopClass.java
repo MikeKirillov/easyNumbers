@@ -1,11 +1,17 @@
 package SandBox.SB01;
 
+import java.util.Arrays;
+
 /*
 testing some for and for each loops
 */
 public class LoopClass {
     public static void main(String[] args) {
-        int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//        int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] intArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        System.out.println(Arrays.toString(intArray));// print array as string
+
         printArray(intArray);
         System.out.println("average = " + printAverage(intArray));
         int max = printMax(intArray);
