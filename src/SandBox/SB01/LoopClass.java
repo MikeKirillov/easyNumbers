@@ -7,8 +7,9 @@ public class LoopClass {
     public static void main(String[] args) {
         int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         printArray(intArray);
-        printAverage(intArray);
-        printMax(intArray);
+        System.out.println("average = " + printAverage(intArray));
+        int max = printMax(intArray);
+        System.out.println("max = " + max);
     }
 
     public static void printArray(int[] intArray) {
@@ -24,7 +25,7 @@ public class LoopClass {
         System.out.println();
     }
 
-    public static void printAverage(int[] intArray) {
+    public static double printAverage(int[] intArray) {
         int average = 0;
 /*        for (int i = 0; i < intArray.length; i++) {
             average += intArray[i];
@@ -32,10 +33,10 @@ public class LoopClass {
         for (int i : intArray) {
             average += i;
         }
-        System.out.println("average = " + (double) average / intArray.length);
+        return (double) average / intArray.length;
     }
 
-    public static void printMax(int[] intArray) {
+    public static int printMax(int[] intArray) {
         int maxValue = 0;
 /*        for (int i = 0; i < intArray.length; i++) {
             if (intArray[i] > maxValue) {
@@ -43,10 +44,10 @@ public class LoopClass {
             }
         }*/
         for (int i : intArray) {
-            if (i > maxValue){
+            if (i > maxValue) {
                 maxValue = i;
             }
         }
-        System.out.println("max = " + maxValue);
+        return maxValue;
     }
 }
