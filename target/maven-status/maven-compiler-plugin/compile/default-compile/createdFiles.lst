@@ -223,6 +223,7 @@ JavaCore/Module06/HW06/Selftask/Race.class
 JavaCore/Module12/CarList/Car.class
 JavaCore/JavaCorePractice/BattleField.class
 JavaCore/Module16/ThreadLocalLeakExample.class
+JavaCore/Module25/TestingLog4j.class
 JavaCore/PracticeWeek02/Task03/Movable.class
 JavaCore/Module07/Zoo/Soundable.class
 JavaCore/Module13/StockAccountThred/StockAccount.class
@@ -352,6 +353,7 @@ JavaCore/PracticeWeek02/Task06/Vector2D.class
 JavaCore/Module04/SRect.class
 JavaCore/Module13/JoinExample$1.class
 JavaCore/Module07/HM07/Selftask/MotorVehicle.class
+JavaCore/Module25/TestingJUL.class
 JavaCore/Module07/Zoo/PopcornStall.class
 JavaCore/Module14/Atomicz/App.class
 JavaCore/Module06/AnimalTwo/Mammal.class
