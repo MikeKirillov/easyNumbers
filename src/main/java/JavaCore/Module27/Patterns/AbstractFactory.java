@@ -1,18 +1,18 @@
 package JavaCore.Module27.Patterns;
 
 public class AbstractFactory {
-/* Абстрактная фабрика — это порождающий паттерн проектирования,
-который позволяет создавать семейства связанных объектов,
-не привязываясь к конкретным классам создаваемых объектов. */
+    /*Абстрактная фабрика — это порождающий паттерн проектирования,
+    который позволяет создавать семейства связанных объектов,
+    не привязываясь к конкретным классам создаваемых объектов*/
 
-    /* Для семейства мясных продуктов создадим общий интерфейс
-    Meat, который на схеме паттерна обозначен, как AbstractProductA. */
+    /*Для семейства мясных продуктов создадим общий интерфейс
+    Meat, который на схеме паттерна обозначен, как AbstractProductA*/
     interface Meat {
         void print();
     }
 
-    /* Создадим классы Chicken и Pork, реализующие интерфейс Meat.
-        На схеме обозначены, как ProductA1 и ProductA2. */
+    /*Создадим классы Chicken и Pork, реализующие интерфейс Meat.
+        На схеме обозначены, как ProductA1 и ProductA2*/
     static class Chicken implements Meat {
         @Override
         public void print() {
@@ -27,13 +27,13 @@ public class AbstractFactory {
         }
     }
 
-    /* Для семейства продуктов для гарнира создадим общий интерфейс Garnish, который на схеме паттерна обозначен,
-    как abstractProductB. */
+    /*Для семейства продуктов для гарнира создадим общий интерфейс Garnish, который на схеме паттерна обозначен,
+    как abstractProductB*/
     interface Garnish {
         void print();
     }
 
-    /* Создадим классы Rice и Buckwheat, реализующие интерфейс Garnish. На схеме обозначены, как ProductB1 и ProductB2. */
+    /*Создадим классы Rice и Buckwheat, реализующие интерфейс Garnish. На схеме обозначены, как ProductB1 и ProductB2*/
     static class Rice implements Garnish {
         @Override
         public void print() {

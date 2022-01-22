@@ -1,20 +1,20 @@
 package JavaCore.Module27.Patterns;
 
 public class FactoryMethod {
-    /* Фабричный метод (Factory Method) или виртуальный конструктор (Virtual Constructor) —
+    /*Фабричный метод (Factory Method) или виртуальный конструктор (Virtual Constructor) —
     это порождающий паттерн проектирования, который определяет общий интерфейс для создания объектов в суперклассе,
-    позволяя подклассам изменять тип создаваемых объектов. */
+    позволяя подклассам изменять тип создаваемых объектов*/
 
 
     //Паттерн применим, только когда есть иерархия продуктов
-   /* Интерфейс Delivery на схеме соответствует интерфейсу Product
-       и описывает общее поведение различных видов доставки */
+   /*Интерфейс Delivery на схеме соответствует интерфейсу Product
+       и описывает общее поведение различных видов доставки*/
     interface Delivery {
         void supply();
     }
 
-    /* Классы Human и Bike на схеме соответствуют ConcreteProduct
-        и оба переопределяют метод supply */
+    /*Классы Human и Bike на схеме соответствуют ConcreteProduct
+        и оба переопределяют метод supply*/
     //Человек доставляет
     static class Human implements Delivery {
         @Override
@@ -31,34 +31,28 @@ public class FactoryMethod {
         }
     }
 
-    /* Теперь создадим интерфейс для фабричных методов, которые
+    /*Теперь создадим интерфейс для фабричных методов, которые
         будут возвращать нам объекты конкретных видов доставки.
-        На схеме соответствует объекту Creator */
+        На схеме соответствует объекту Creator*/
     interface DeliveryFactory {
         Delivery createDelivery();
     }
 
-    // Фабрика, возвращающая объект велодоставки
+    //Фабрика, возвращающая объект велодоставки
     static class BikeDeliveryFactory implements DeliveryFactory {
         public Delivery createDelivery() {
             return new Bike();
         }
     }
 
-    // Фабрика, возвращающая объект пешеходной доставки
+    //Фабрика, возвращающая объект пешеходной доставки
     static class HumanDeliveryFactory implements DeliveryFactory {
         public Delivery createDelivery() {
             return new Human();
         }
     }
 
-    public static void main(String[] args) {
-        DeliveryFactory deliveryFactory = supplyDelivery(2);
-        Delivery delivery = deliveryFactory.createDelivery();
-        delivery.supply();
-    }
-
-    // Подставляя в переменную "а" различные числа, получим различные типы доставки
+    //Подставляя в переменную "а" различные числа, получим различные типы доставки
     static DeliveryFactory supplyDelivery(int a) {
         switch (a) {
             case 1:
@@ -68,6 +62,12 @@ public class FactoryMethod {
             default:
                 throw new RuntimeException("Such a factory does not exist ");
         }
+    }
+
+    public static void main(String[] args) {
+        DeliveryFactory deliveryFactory = supplyDelivery(2);
+        Delivery delivery = deliveryFactory.createDelivery();
+        delivery.supply();
     }
 }
 
