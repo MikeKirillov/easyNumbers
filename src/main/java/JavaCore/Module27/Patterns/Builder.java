@@ -50,12 +50,12 @@ public class Builder {
     static abstract class SaladBuilder {
         Salad salad;
 
-        //Этот метод создает новый объект Salad с пустыми полями.
+        //Этот метод создает новый объект Salad с пустыми полями
         void createSalad() {
             salad = new Salad();
         }
 
-        /*Для каждого поля создаваемого класса добавляем метод, который создает это поле.*/
+        /*Для каждого поля создаваемого класса добавляем метод, который создает это поле*/
         abstract void buildVegetables();
 
         abstract void buildFruits();
@@ -64,13 +64,13 @@ public class Builder {
 
         abstract void buildSauce();
 
-        //Этот метод возвращает готовый объект Salad с заполненными полями.
+        //Этот метод возвращает готовый объект Salad с заполненными полями
         Salad getSalad() {
             return salad;
         }
     }
 
-    /*SunSaladBuilder и CesarSaladBuilder - конкретные реализации абстрактного интерфейса SaladBuilder.
+    /*SunSaladBuilder и CesarSaladBuilder - конкретные реализации абстрактного интерфейса SaladBuilder
         На схеме - ConcreteBuilder*/
     static class SunSaladBuilder extends SaladBuilder {
         @Override
@@ -116,19 +116,17 @@ public class Builder {
         }
     }
 
-    /*
-        SaladDirector - создает объекты на основе абстрактного интерфейса Builder.
-        На схеме обозначен как Director.
-    */
+    /*SaladDirector - создает объекты на основе абстрактного интерфейса Builder
+        На схеме обозначен как Director*/
     static class SaladDirector {
         SaladBuilder builder;
 
-        //  Здесь мы передаем нашему директору конкретного билдера, на основании которого будут создаваться те или иные салаты.
+        //Здесь мы передаем нашему директору конкретного билдера, на основании которого будут создаваться те или иные салаты
         public void setBuilder(SaladBuilder builder) {
             this.builder = builder;
         }
 
-        //  Здесь мы из частей создаем готовый салат, который в итоге и возвращаем.
+        //Здесь мы из частей создаем готовый салат, который в итоге и возвращаем
         Salad buildSalad() {
             builder.createSalad();
             builder.buildVegetables();
@@ -143,14 +141,15 @@ public class Builder {
 
     public static void main(String[] args) {
         SaladDirector saladDirector = new SaladDirector(); // Создаем объект директора
-        saladDirector.setBuilder(new SunSaladBuilder());// Передаем директору конкретного строителя.
-        Salad salad = saladDirector.buildSalad();// Получаем готовый салат.
 
+        saladDirector.setBuilder(new SunSaladBuilder());// Передаем директору конкретного строителя
+        Salad salad = saladDirector.buildSalad();// Получаем готовый салат
         System.out.println(salad);// Выводим toString() готового салата "Солнышко"
+
         System.out.println("==================================");
-        saladDirector.setBuilder(new CesarSaladBuilder());// Передаем директору строителя салата "Цезарь".
-        salad = saladDirector.buildSalad();// Получаем другой салат.
+
+        saladDirector.setBuilder(new CesarSaladBuilder());// Передаем директору строителя салата "Цезарь"
+        salad = saladDirector.buildSalad();// Получаем другой салат
         System.out.println(salad);// Выводим toString() готового салата "Цезарь"
     }
-
 }
